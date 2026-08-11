@@ -66,9 +66,12 @@
   .crop-btn:active .crop-stage{ transform:scale(0.92) translateY(4px); }
   .bounce .crop-stage{ animation:bounce 0.25s ease-out; }
   @keyframes bounce{ 0%{transform:scale(1);} 40%{transform:scale(1.15) translateY(-8px);} 100%{transform:scale(1);} }
-  .stage-img{ position:absolute; left:0; width:100%; object-fit:contain; image-rendering:pixelated; pointer-events:none; }
+  .stage-img{ position:absolute; left:0; width:100%; object-fit:contain; image-rendering:pixelated; pointer-events:none;
+    -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -webkit-user-drag:none; }
+  .skin-thumb{ width:38px; height:38px; background:rgba(0,0,0,0.15); border-radius:4px; flex-shrink:0; object-fit:contain; image-rendering:pixelated;
+    -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; -webkit-user-drag:none; pointer-events:none; }
   .pot-img{ bottom:0; height:48%; }
-  .plant-img{ bottom:30%; height:70%; }
+  .plant-img{ bottom:30%; height:70%; transform-origin:bottom center; transition:transform 0.25s ease-out; }
   .plant-img.rainbow-img{ animation:huecycle 3s linear infinite; }
   @keyframes huecycle{ from{filter:hue-rotate(0deg);} to{filter:hue-rotate(360deg);} }
   .hint{ position:absolute; top:6px; left:0; right:0; text-align:center; font-size:14px; color:var(--wood-dark); opacity:0.75;}
@@ -118,7 +121,6 @@
     display:flex; align-items:center; gap:8px; background:var(--soil-light);
     border:3px solid var(--soil-dark); border-radius:5px; padding:6px 8px;
   }
-  .skin-thumb{ width:38px; height:38px; background:rgba(0,0,0,0.15); border-radius:4px; flex-shrink:0; object-fit:contain; image-rendering:pixelated; }
   .skin-info{ flex:1; color:var(--cream); font-size:14px; line-height:1.25; }
   .skin-info b{ color:var(--gold); font-family:'Press Start 2P',monospace; font-size:13px; display:block; }
 
@@ -190,8 +192,8 @@
     <div class="ground"></div>
     <button class="crop-btn" id="cropBtn">
       <div class="crop-stage">
-        <img class="stage-img pot-img" id="potImg" alt="">
-        <img class="stage-img plant-img" id="plantImg" alt="">
+        <img class="stage-img pot-img" id="potImg" alt="" draggable="false">
+        <img class="stage-img plant-img" id="plantImg" alt="" draggable="false">
       </div>
     </button>
   </div>
@@ -298,10 +300,22 @@
   const potImg = document.getElementById('potImg');
   const plantImg = document.getElementById('plantImg');
 
+  function currentStageIndex(plant){
+    if(!plant || !plant.stages || plant.stages.length===0) return 0;
+    return state.totalHarvests % plant.stages.length;
+  }
   function currentStageSrc(plant){
     if(!plant || !plant.stages || plant.stages.length===0) return null;
-    const idx = state.totalHarvests % plant.stages.length;
-    return plant.stages[idx];
+    return plant.stages[currentStageIndex(plant)];
+  }
+  // cấp phát triển càng thấp (mới trồng) thì ảnh càng nhỏ, cấp cuối hiển thị full size.
+  // Engine dùng stages.length của từng cây nên hỗ trợ số giai đoạn bất kỳ, không hard-code.
+  const MIN_STAGE_SCALE = 0.55;
+  function stageScale(plant){
+    const total = (plant && plant.stages) ? plant.stages.length : 1;
+    if(total <= 1) return 1;
+    const idx = currentStageIndex(plant);
+    return MIN_STAGE_SCALE + (1 - MIN_STAGE_SCALE) * (idx / (total - 1));
   }
   function updateField(){
     const plant = getByName(DATA.plants, state.equippedPlant);
@@ -311,6 +325,7 @@
       const src = currentStageSrc(plant);
       if(src) withFallback(plantImg, src, plant.name);
       plantImg.classList.toggle('rainbow-img', /cầu vồng|rainbow/i.test(plant.name));
+      plantImg.style.transform = `scale(${stageScale(plant)})`;
     }
   }
 
@@ -462,6 +477,7 @@
 
       const thumb = document.createElement('img');
       thumb.className = 'skin-thumb';
+      thumb.draggable = false;
       withFallback(thumb, thumbGetter(item), item.name);
       row.appendChild(thumb);
 
@@ -629,6 +645,14 @@
 
   setInterval(save, 5000);
   window.addEventListener('beforeunload', save);
+
+  // ============= CHẶN TẢI ẢNH (chuột phải / nhấn giữ trên mobile) =============
+  document.addEventListener('contextmenu', (e)=>{
+    if(e.target && (e.target.tagName === 'IMG' || e.target.tagName === 'CANVAS')) e.preventDefault();
+  });
+  document.addEventListener('dragstart', (e)=>{
+    if(e.target && e.target.tagName === 'IMG') e.preventDefault();
+  });
 
   // ============= LOAD JSON (engine đọc content từ file) =============
   function fetchJSON(path){
