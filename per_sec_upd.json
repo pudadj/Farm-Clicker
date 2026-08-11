@@ -1,0 +1,17 @@
+[
+  { "name": "Máy tưới tự động", "gia": 25, "so_duoc_nhan": 1, "he_so_tang": 15 },
+  { "name": "Thuê nông dân", "gia": 125, "so_duoc_nhan": 2, "he_so_tang": 15 },
+  { "name": "Máy gặt cơ giới", "gia": 625, "so_duoc_nhan": 3, "he_so_tang": 15 },
+  { "name": "Đội ngũ thu hoạch", "gia": 3125, "so_duoc_nhan": 4, "he_so_tang": 15 },
+  { "name": "Robot nông nghiệp", "gia": 15625, "so_duoc_nhan": 7, "he_so_tang": 15 },
+  { "name": "Drone rải hạt giống", "gia": 78125, "so_duoc_nhan": 11, "he_so_tang": 15 },
+  { "name": "Nhà kính thông minh", "gia": 390625, "so_duoc_nhan": 17, "he_so_tang": 15 },
+  { "name": "Hệ thống tưới AI", "gia": 1953125, "so_duoc_nhan": 28, "he_so_tang": 15 },
+  { "name": "Vệ tinh giám sát mùa vụ", "gia": 9765625, "so_duoc_nhan": 45, "he_so_tang": 15 },
+  { "name": "Trại chăn nuôi phép thuật", "gia": 48828125, "so_duoc_nhan": 72, "he_so_tang": 15 },
+  { "name": "Thần nông bảo hộ", "gia": 244140625, "so_duoc_nhan": 115, "he_so_tang": 15 },
+  { "name": "Đội quân tinh linh đất", "gia": 1220703125, "so_duoc_nhan": 185, "he_so_tang": 15 },
+  { "name": "Cối xay thần kỳ", "gia": 6103515625, "so_duoc_nhan": 296, "he_so_tang": 15 },
+  { "name": "Vương quốc nông nghiệp", "gia": 30517578125, "so_duoc_nhan": 474, "he_so_tang": 15 },
+  { "name": "Đế chế mùa màng vĩnh cửu", "gia": 152587890625, "so_duoc_nhan": 758, "he_so_tang": 15 }
+]

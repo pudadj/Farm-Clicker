@@ -1,0 +1,17 @@
+[
+  { "name": "Phân bón", "gia": 10, "so_duoc_nhan": 1, "he_so_tang": 15 },
+  { "name": "Kính lúp thần kỳ", "gia": 50, "so_duoc_nhan": 2, "he_so_tang": 15 },
+  { "name": "Cuốc thần", "gia": 250, "so_duoc_nhan": 3, "he_so_tang": 15 },
+  { "name": "Găng tay ma thuật", "gia": 1250, "so_duoc_nhan": 4, "he_so_tang": 15 },
+  { "name": "Nước phép tăng lực", "gia": 6250, "so_duoc_nhan": 7, "he_so_tang": 15 },
+  { "name": "Bùa may mắn nông dân", "gia": 31250, "so_duoc_nhan": 11, "he_so_tang": 15 },
+  { "name": "Rìu sấm sét", "gia": 156250, "so_duoc_nhan": 17, "he_so_tang": 15 },
+  { "name": "Vương trượng đất mẹ", "gia": 781250, "so_duoc_nhan": 28, "he_so_tang": 15 },
+  { "name": "Nhẫn nông dân huyền thoại", "gia": 3906250, "so_duoc_nhan": 45, "he_so_tang": 15 },
+  { "name": "Áo giáp mùa màng", "gia": 19531250, "so_duoc_nhan": 72, "he_so_tang": 15 },
+  { "name": "Sách phép nông nghiệp", "gia": 97656250, "so_duoc_nhan": 115, "he_so_tang": 15 },
+  { "name": "Đá quý tăng lực", "gia": 488281250, "so_duoc_nhan": 185, "he_so_tang": 15 },
+  { "name": "Cánh thiên thần mùa vụ", "gia": 2441406250, "so_duoc_nhan": 296, "he_so_tang": 15 },
+  { "name": "Vương miện chúa tể nông trại", "gia": 12207031250, "so_duoc_nhan": 474, "he_so_tang": 15 },
+  { "name": "Ấn phong thần nông", "gia": 61035156250, "so_duoc_nhan": 758, "he_so_tang": 15 }
+]

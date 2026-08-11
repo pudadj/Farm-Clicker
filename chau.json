@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Chậu đất nung",
+    "he_so_nhan": 1,
+    "skin": "assets/pots/clay/skin.png",
+    "mua_bang_gold": false,
+    "gia": 0
+  },
+  {
+    "name": "Chậu gốm xanh",
+    "he_so_nhan": 1.2,
+    "skin": "assets/pots/ceramic_blue/skin.png",
+    "mua_bang_gold": false,
+    "gia": 200
+  },
+  {
+    "name": "Chậu đá hoa",
+    "he_so_nhan": 1.5,
+    "skin": "assets/pots/marble/skin.png",
+    "mua_bang_gold": false,
+    "gia": 1000
+  },
+  {
+    "name": "Chậu gỗ sồi",
+    "he_so_nhan": 2,
+    "skin": "assets/pots/oak/skin.png",
+    "mua_bang_gold": false,
+    "gia": 5000
+  },
+  {
+    "name": "Chậu vàng ròng",
+    "he_so_nhan": 3,
+    "skin": "assets/pots/gold/skin.png",
+    "mua_bang_gold": false,
+    "gia": 20000
+  },
+  {
+    "name": "Chậu bạc cổ",
+    "he_so_nhan": 4,
+    "skin": "assets/pots/silver/skin.png",
+    "mua_bang_gold": false,
+    "gia": 100000
+  },
+  {
+    "name": "Chậu kim cương",
+    "he_so_nhan": 6,
+    "skin": "assets/pots/diamond/skin.png",
+    "mua_bang_gold": false,
+    "gia": 500000
+  },
+  {
+    "name": "Chậu cầu vồng huyền thoại",
+    "he_so_nhan": 10,
+    "skin": "assets/pots/rainbow/skin.png",
+    "mua_bang_gold": true,
+    "gia": 500
+  }
+]

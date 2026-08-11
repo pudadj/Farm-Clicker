@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Cây cà chua",
+    "icon": "assets/plants/tomato/icon.png",
+    "stages": [
+      "assets/plants/tomato/1.png",
+      "assets/plants/tomato/2.png",
+      "assets/plants/tomato/3.png"
+    ],
+    "he_so_nhan": 1,
+    "mua_bang_gold": false,
+    "gia": 0
+  },
+  {
+    "name": "Cây bí ngô",
+    "icon": "assets/plants/pumpkin/icon.png",
+    "stages": [
+      "assets/plants/pumpkin/1.png",
+      "assets/plants/pumpkin/2.png",
+      "assets/plants/pumpkin/3.png"
+    ],
+    "he_so_nhan": 1.2,
+    "mua_bang_gold": false,
+    "gia": 200
+  },
+  {
+    "name": "Cây nho tím",
+    "icon": "assets/plants/grape/icon.png",
+    "stages": [
+      "assets/plants/grape/1.png",
+      "assets/plants/grape/2.png",
+      "assets/plants/grape/3.png"
+    ],
+    "he_so_nhan": 1.5,
+    "mua_bang_gold": false,
+    "gia": 1000
+  },
+  {
+    "name": "Cây dưa vàng",
+    "icon": "assets/plants/melon/icon.png",
+    "stages": [
+      "assets/plants/melon/1.png",
+      "assets/plants/melon/2.png",
+      "assets/plants/melon/3.png"
+    ],
+    "he_so_nhan": 2,
+    "mua_bang_gold": false,
+    "gia": 5000
+  },
+  {
+    "name": "Cây bạc hà thần",
+    "icon": "assets/plants/mint/icon.png",
+    "stages": [
+      "assets/plants/mint/1.png",
+      "assets/plants/mint/2.png",
+      "assets/plants/mint/3.png"
+    ],
+    "he_so_nhan": 3,
+    "mua_bang_gold": false,
+    "gia": 20000
+  },
+  {
+    "name": "Cây ngọc lục bảo",
+    "icon": "assets/plants/emerald/icon.png",
+    "stages": [
+      "assets/plants/emerald/1.png",
+      "assets/plants/emerald/2.png",
+      "assets/plants/emerald/3.png"
+    ],
+    "he_so_nhan": 4,
+    "mua_bang_gold": false,
+    "gia": 50000
+  },
+  {
+    "name": "Cây pha lê băng",
+    "icon": "assets/plants/crystal/icon.png",
+    "stages": [
+      "assets/plants/crystal/1.png",
+      "assets/plants/crystal/2.png",
+      "assets/plants/crystal/3.png"
+    ],
+    "he_so_nhan": 6,
+    "mua_bang_gold": false,
+    "gia": 250000
+  },
+  {
+    "name": "Cây cầu vồng huyền thoại",
+    "icon": "assets/plants/rainbow/icon.png",
+    "stages": [
+      "assets/plants/rainbow/1.png",
+      "assets/plants/rainbow/2.png",
+      "assets/plants/rainbow/3.png"
+    ],
+    "he_so_nhan": 10,
+    "mua_bang_gold": false,
+    "gia": 1000000
+  },
+  {
+    "name": "Cây Ice Flame",
+    "icon": "assets/plants/ice_flame/icon.png",
+    "stages": [
+      "assets/plants/ice_flame/1.png",
+      "assets/plants/ice_flame/2.png",
+      "assets/plants/ice_flame/3.png"
+    ],
+    "he_so_nhan": 15,
+    "mua_bang_gold": true,
+    "gia": 1000
+  }
+]
